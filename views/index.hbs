@@ -1,0 +1,55 @@
+   <div class="container">
+        <div class="imagen"></div>
+      <img
+        src="../public/images/MicrosoftTeams-image.jpg"
+        class="border border-danger w-50"
+        alt=""
+      />
+<br>
+<br>
+<br>
+      <h2>Nuestros Productos</h2>
+      <div class="imagenes">
+        <img src="../public/images/aros1.jpg" class="rounded"/>
+        <img
+          src="../public/images/billetera1.jpg"
+          class="rounded"/>
+        <img src="../public/images/cartera1.jpg" class="rounded"/>
+ </div>
+      <br>
+      <br>
+      <h2>Lo nuevo!</h2>
+      <div class="imagenes">
+    <img src="../public/images/pcarteras.jpg" class="border border-5">
+    <img src="../public/images/ppanuelos.jpg" class="border border-5" >
+    <img src="../public/images/reloj1.jpg" class="border border-5">
+    </div>
+    </div>
+<br>
+<br>
+<br>
+<h2>Sigamos conectados</h2>
+
+<section>
+    <form action="/" method="POST">
+    {{#each arrWarnings}}
+    <div class="alert alert-danger d-flex align-items-center" role="alert">
+<svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+<div>
+{{msg}}
+</div>
+</div>
+    
+    {{/each}}
+        <label for="name" Hidden>Ingrese nombre</label>
+        <input type="text" id="name" name="name" placeholder="nombre..." autofocus {{#if formData.name}} value=" {{formData.name}}"{{/if}}>
+        <label for="lastname" Hidden>Ingrese Apellido</label>
+        <input type="text" id="lastName" name="lastName" placeholder="apellido" {{#if formData.lastName}} value="{{form.Data.lastName}}" {{/if}}>
+        <label for="email" Hidden>Ingrese email</label>
+        <input type="text" id="email" name="email" placeholder="email" {{#if formData.email}} value="{{formData.email}}" {{/if}}>
+        <label for="message" Hidden>Ingrese Mensaje</label>
+        <textarea name="message" id="message" cols="30" rows="10">{{formData.message}}</textarea>
+        
+        <input type="submit" value="Enviar">
+    </form>
+</section>
